@@ -1,0 +1,27 @@
+<!--
+  EmailJS template 2: confirmation email to the STUDENT (only sent when they type an email).
+  In EmailJS → Email Templates → Create New Template:
+    Subject:   AMIS Center – we received your request ({{reference}})
+    To Email:  {{to_email}}
+    From Name: AMIS Center
+    Reply To:  the school's inbox (e.g. info@amiscenter.com)
+  Then paste everything below into the "Content" (switch the editor to code / HTML).
+-->
+<div style="font-family: Arial, sans-serif; max-width: 560px; color: #1A1410;">
+  <div style="background: #FF8000; padding: 18px 22px; border-radius: 10px 10px 0 0;">
+    <h2 style="margin: 0; font-size: 20px;">Thank you, {{student_name}}!</h2>
+    <p style="margin: 4px 0 0;">We received your enrollment request.</p>
+  </div>
+  <div style="border: 1px solid #EADFD4; border-top: 0; padding: 18px 22px; border-radius: 0 0 10px 10px;">
+    <p style="margin-top: 0;">Your reference number is <strong>{{reference}}</strong>.</p>
+    <table style="width: 100%; border-collapse: collapse;" cellpadding="8">
+      <tr><td style="color:#6B5F55; width: 130px;">Course</td><td><strong>{{course}}</strong></td></tr>
+      <tr style="background:#FBF6F1;"><td style="color:#6B5F55;">Class time</td><td>{{class_time}}</td></tr>
+      <tr><td style="color:#6B5F55;">Level test</td><td><strong>{{level_test}}</strong></td></tr>
+    </table>
+    <p>If you booked a level test, please arrive 10 minutes early and bring a pen.
+       Our team will contact you on <strong>{{student_phone}}</strong> within 1 working day to confirm.</p>
+    <p style="margin-bottom: 0;">See you soon,<br><strong>AMIS Center</strong> · មជ្ឈមណ្ឌល អាមី<br>
+      <span style="color:#6B5F55; font-size: 13px;">Toul Kork, Phnom Penh · 012 345 678 · Telegram @amiscenter</span></p>
+  </div>
+</div>
