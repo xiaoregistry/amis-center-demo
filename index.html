@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AMIS Center</title>
+  <meta name="description" content="AMIS Center – English, French and Chinese classes plus AutoCAD and Photoshop courses in Toul Kork, Phnom Penh.">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="wrap topbar__inner">
+      <span class="topbar__info"><span data-i18n="top_hours">Mon–Fri 7:00–20:30 · Sat–Sun 8:00–17:00</span></span>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+        <button type="button" data-lang="km" aria-pressed="false" lang="km">ខ្មែរ</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="wrap header__inner">
+      <a class="brand" href="#home" aria-label="AMIS Center home">
+        <img src="assets/img/logo.png" alt="AMIS Center logo" width="52" height="52">
+        <span class="brand__text">
+          <strong>AMIS Center</strong>
+          <small lang="km">មជ្ឈមណ្ឌល អាមី</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only" data-i18n="menu">Menu</span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="#home" data-i18n="nav_home">Home</a>
+        <a href="#courses" data-i18n="nav_courses">Courses</a>
+        <a href="#schedule" data-i18n="nav_schedule">Schedule &amp; Fees</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+        <a href="#enroll" class="btn btn--primary btn--sm" data-i18n="cta_enroll">Enroll now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="wrap hero__inner">
+        <div class="hero__text">
+          <p class="eyebrow" data-i18n="hero_eyebrow">Language &amp; skills school · Toul Kork, Phnom Penh</p>
+          <h1 data-i18n="hero_title">Learn a language. Build a skill. Open new doors.</h1>
+          <p class="lead" data-i18n="hero_lead">English, French and Chinese classes, plus practical computer courses. Small classes, flexible times, every level welcome.</p>
+          <div class="hero__actions">
+            <a href="#enroll" class="btn btn--primary" data-i18n="cta_enroll">Enroll now</a>
+            <a href="#enroll" class="btn btn--ghost" data-book-test data-i18n="cta_test">Book a level test</a>
+          </div>
+          <ul class="chips">
+            <li data-i18n="chip_langs">3 languages</li>
+            <li data-i18n="chip_skills">AutoCAD &amp; Photoshop</li>
+            <li data-i18n="chip_times">Morning to evening</li>
+            <li data-i18n="chip_weekend">Weekend classes</li>
+          </ul>
+        </div>
+        <div class="hero__art" aria-hidden="true">
+          <div class="disc">
+            <img src="assets/img/logo.png" alt="" width="300" height="300">
+          </div>
+          <span class="bubble bubble--1">Hello!</span>
+          <span class="bubble bubble--2">Bonjour !</span>
+          <span class="bubble bubble--3" lang="zh">你好！</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- COURSES -->
+    <section class="section" id="courses">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="eyebrow" data-i18n="courses_eyebrow">Our courses</p>
+          <h2 data-i18n="courses_title">Choose what you want to learn</h2>
+        </div>
+
+        <h3 class="group-title"><span class="dot dot--orange"></span><span data-i18n="group_languages">Language classes</span></h3>
+        <div class="cards" id="lang-cards"></div>
+
+        <h3 class="group-title"><span class="dot dot--ink"></span><span data-i18n="group_short">Short courses</span></h3>
+        <div class="cards" id="short-cards"></div>
+      </div>
+    </section>
+
+    <!-- SCHEDULE & FEES -->
+    <section class="section section--tint" id="schedule">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="eyebrow" data-i18n="schedule_eyebrow">Schedule &amp; fees</p>
+          <h2 data-i18n="schedule_title">Classes that fit around school and work</h2>
+        </div>
+        <div class="schedule">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col" data-i18n="th_time">Time</th>
+                  <th scope="col" data-i18n="th_days">Days</th>
+                  <th scope="col" data-i18n="th_courses">Courses</th>
+                </tr>
+              </thead>
+              <tbody id="schedule-body"></tbody>
+            </table>
+          </div>
+          <div class="fees">
+            <h3 data-i18n="fees_title">Fees</h3>
+            <ul class="fee-list" id="fee-list"></ul>
+            <p class="note" data-i18n="fees_note">Example prices for the demo. Final fees to be confirmed by AMIS Center.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap about">
+        <div class="about__text">
+          <p class="eyebrow" data-i18n="about_eyebrow">About us</p>
+          <h2 data-i18n="about_title">Helping young people grow through learning</h2>
+          <p data-i18n="about_p1">AMIS Center helps students and young professionals in Phnom Penh gain the languages and skills they need for study, work and life.</p>
+          <p data-i18n="about_p2">Our name comes from French: Centre d'aide et de motivation des intellectuels pour la société, a centre that supports and motivates learners to contribute to society.</p>
+          <blockquote class="fullname">
+            <span lang="km">មជ្ឈមណ្ឌល អាមី</span>
+            <span lang="fr">Centre d'aide et de motivation des intellectuels pour la société</span>
+          </blockquote>
+        </div>
+        <ul class="values">
+          <li>
+            <span class="values__mark values__mark--1"></span>
+            <h3 data-i18n="v1_title">Caring teachers</h3>
+            <p data-i18n="v1_text">Teachers who take time to explain and follow each student's progress.</p>
+          </li>
+          <li>
+            <span class="values__mark values__mark--2"></span>
+            <h3 data-i18n="v2_title">Small classes</h3>
+            <p data-i18n="v2_text">More time to speak, ask questions and practise in every lesson.</p>
+          </li>
+          <li>
+            <span class="values__mark values__mark--3"></span>
+            <h3 data-i18n="v3_title">Practical learning</h3>
+            <p data-i18n="v3_text">Real conversations and real projects you can use straight away.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ENROLL + CONTACT -->
+    <section class="section section--dark" id="enroll">
+      <div class="wrap enroll">
+        <div class="enroll__form">
+          <p class="eyebrow eyebrow--light" data-i18n="enroll_eyebrow">Enroll</p>
+          <h2 data-i18n="enroll_title">Reserve your place</h2>
+          <p class="muted" data-i18n="enroll_lead">Fill in the form and our team will contact you to confirm your class and level test.</p>
+          <form id="enroll-form" novalidate>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-name" data-i18n="f_name">Full name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="f-phone" data-i18n="f_phone">Phone or Telegram</label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-email"><span data-i18n="f_email">Email</span> <span class="opt" data-i18n="f_email_hint">(to receive a confirmation)</span></label>
+              <input id="f-email" name="email" type="email" autocomplete="email">
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-course" data-i18n="f_course">Course</label>
+                <select id="f-course" name="course" required></select>
+              </div>
+              <div class="field">
+                <label for="f-time" data-i18n="f_time">Preferred class time</label>
+                <select id="f-time" name="time">
+                  <option value="morning" data-i18n="t_morning">Morning</option>
+                  <option value="afternoon" data-i18n="t_afternoon">Afternoon</option>
+                  <option value="evening" data-i18n="t_evening">Evening</option>
+                  <option value="weekend" data-i18n="t_weekend">Weekend</option>
+                </select>
+              </div>
+            </div>
+
+            <fieldset class="test" id="test-box">
+              <legend data-i18n="test_legend">Level test</legend>
+              <p class="test__info" data-i18n="test_info">Not sure which level to join? Book a short level test at the center (about 30 minutes, written and speaking).</p>
+              <div class="choice">
+                <label class="choice__opt">
+                  <input type="radio" name="testChoice" value="book" id="tc-book" checked>
+                  <span data-i18n="test_book">Book a level test</span>
+                </label>
+                <label class="choice__opt">
+                  <input type="radio" name="testChoice" value="beginner" id="tc-beginner">
+                  <span data-i18n="test_beginner">I'm a complete beginner</span>
+                </label>
+              </div>
+              <div class="test__slots" id="test-slots">
+                <p class="test__label" data-i18n="test_pick_day">Choose a day</p>
+                <div class="days" id="test-days" role="radiogroup"></div>
+                <p class="test__label" data-i18n="test_pick_time">Choose a time</p>
+                <div class="days" id="test-times" role="radiogroup"></div>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="f-msg" data-i18n="f_msg">Message (optional)</label>
+              <textarea id="f-msg" name="message" rows="3"></textarea>
+            </div>
+            <div class="hp" aria-hidden="true">
+              <label for="f-website">Website</label>
+              <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <p class="form-error" id="form-error" role="alert" hidden></p>
+            <button type="submit" class="btn btn--primary" id="f-submit" data-i18n="f_submit">Send enrollment request</button>
+          </form>
+
+          <div class="done" id="done" hidden tabindex="-1">
+            <div class="done__head">
+              <span class="done__check" aria-hidden="true">✓</span>
+              <div>
+                <h3 data-i18n="done_title">Request received!</h3>
+                <p class="done__ref"><span data-i18n="done_ref">Reference</span>: <strong id="done-ref"></strong></p>
+              </div>
+            </div>
+            <dl class="done__list" id="done-list"></dl>
+            <p class="done__next" id="done-next"></p>
+            <p class="done__email" id="done-email" hidden></p>
+            <p class="done__demo" id="done-demo" hidden data-i18n="done_demo">This is a demo, so no email was sent.</p>
+            <button type="button" class="btn btn--ghost-light" id="done-again" data-i18n="done_again">Send another request</button>
+          </div>
+        </div>
+
+        <aside class="contact" id="contact">
+          <h3 data-i18n="contact_title">Visit or contact us</h3>
+          <dl>
+            <dt data-i18n="c_address">Address</dt>
+            <dd data-i18n="c_address_val">Toul Kork, Phnom Penh, Cambodia</dd>
+            <dt data-i18n="c_phone">Phone</dt>
+            <dd>012 345 678</dd>
+            <dt>Telegram</dt>
+            <dd>@amiscenter</dd>
+            <dt>Facebook</dt>
+            <dd>AMIS Center</dd>
+            <dt data-i18n="c_hours">Opening hours</dt>
+            <dd data-i18n="top_hours">Mon–Fri 7:00–20:30 · Sat–Sun 8:00–17:00</dd>
+          </dl>
+          <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Toul+Kork+Phnom+Penh" target="_blank" rel="noopener">
+            <svg viewBox="0 0 320 150" aria-hidden="true">
+              <rect width="320" height="150" fill="#2a221c"/>
+              <path d="M0 40 L320 70 M0 110 L320 95 M80 0 L110 150 M210 0 L190 150 M0 150 L140 0" stroke="#463a31" stroke-width="10" fill="none"/>
+              <path d="M0 40 L320 70 M80 0 L110 150" stroke="#5b4c40" stroke-width="3" fill="none"/>
+              <circle cx="152" cy="66" r="22" fill="#FF8000" opacity=".25"/>
+              <path d="M152 44c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z" fill="#FF8000"/>
+              <circle cx="152" cy="60" r="6" fill="#1a1410"/>
+            </svg>
+            <span data-i18n="c_map">Open in Google Maps</span>
+          </a>
+          <p class="note note--light" data-i18n="c_note">Phone, Telegram and exact address are placeholders for the demo.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="brand brand--footer">
+        <img src="assets/img/logo.png" alt="" width="40" height="40">
+        <span class="brand__text"><strong>AMIS Center</strong><small lang="km">មជ្ឈមណ្ឌល អាមី</small></span>
+      </div>
+      <p>© <span id="year">2026</span> AMIS Center · <span data-i18n="c_address_val">Toul Kork, Phnom Penh, Cambodia</span></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
